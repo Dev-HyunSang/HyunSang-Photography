@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyunSang Park Photography - Admin</title>
+</head>
+<body>
+    <h1>Upload Image</h1>
+    <input type="password" placeholder="Password" id="key">
+    <br>
+    <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg">
+    <input onclick="upload()" type="submit">
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function main(){
+        axios({
+            method: 'post',
+            url: '/upload',
+            data: {
+                "key": key.innerText
+                "file": 
+            }
+          })
+            .then(response=>{
+                document.getElementById('hello-message').innerText = response.data.message;
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+        }
+</script>
+</html>

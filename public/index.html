@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HyunSang Park Photography</title>
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/sidenav.css">
+</head>
+<body onload="main()">
+    <div class="sidenav">
+        <p class="title">
+            <a href="/">HyunSang Park Photography</a>
+        </p>
+        <p class="nav-item"><b>2021</b></p>
+        <a class="nav-item-link" href="/2021/october.html">October</a>
+        <a class="nav-item-link" href="">November</a>
+        <a class="nav-item-link" href="">December</a>
+        <p class="nav-item"><b>2022</b></p>
+        <a class="nav-itme-link">January</a>
+    </div>
+    <div class="main-container">
+        <h1>HyunSang Park Photography</h1>
+        <p id="hello-message"></p>
+        <div class="info">
+            <p>
+                저는 다양한 사진을 찍고 있습니다. 인간의 아픔과 슬픔, 행복 등 다양한 표정과 우리가 살고 있는 환경의 아름다운 풍경을 담고 있습니다.
+                <br>
+                중학교 방송부에서 처음으로 사진을 접한 후 간간히 사진을 찍고 기록하고 있습니다.
+                <br>
+                다양한 사진 작가(기자) 분들의 사진을 보면서 영감을 얻고 감명 받습니다.
+            </p>
+            <div class="impressive-photographer">
+                <p>
+                    <b>Inspired photographer. </b><a href="https://widerimage.reuters.com/photographer/kim-hong-ji" target='_blank'>Kim Hong-Ji</a> / <a href="https://widerimage.reuters.com/photographer/kim-kyung-hoon" target='_blank'>Kyung-Hoon Kim</a> / <a href="http://alanschaller.com/" target='_blank'>Alan Schaller</a> / <a href="https://www.danbalilty.com/" target='_blank'>Dan Balilty</a> / <a href="https://www.instagram.com/projectsoldierkwv/" target='_blank'>Rami Hyun</a>
+                </p>
+                <p>
+                    <b>Newspaper. </b><a href="https://www.nytimes.com/" target='_blank'>New York Times</a> / <a href="https://www.reuters.com/" target='_blank'>Reuters</a>
+                </p>
+            </div>
+            <div class="equipment-info">
+                <p>
+                    <b>Daily Equipment: </b> Canon 650D + 50mm F1.8 STM
+                    <br>
+                    <b>School Equipment: </b> Canon 5D Mark4, Canon 5D Mark3, Sony A9, Sony 7R / Canon 70-200mm F2.8, Canon 24-70mm F2.8, Sony FE 2.8 24-70 GM, Sony 70-200mm F2.8
+                </p>
+            </div>
+            <img class="main-image" src="./assets/images/IMG_7646.jpg">
+            <p></p>
+            <p class="copyright">Copyright ⓒ 2022 by HyunSang Park All Pictures cannot be copied without permission.</p>
+        </div>
+    </div>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    function main()
+        {
+          axios({
+            method: 'post',
+            url: '/api',
+            data: {}
+          })
+            .then(response=>{
+                document.getElementById('hello-message').innerText = response.data.message;
+            })
+            .catch(error=>{
+                console.log(error);
+            })
+        }
+</script>
+</html>

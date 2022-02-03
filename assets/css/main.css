@@ -1,0 +1,55 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+@font-face { 
+    font-family: 'NanumGothic'; 
+    src: url(/assets/fonts/NanumGothic.ttf) format('truetype'); 
+}
+body {
+    font-family: 'NanumGothic';
+}
+h1 {
+    font-weight: bolder;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    background-color: #000;
+    color: #fff;
+}
+.main-container {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+#hello-message {
+    font-weight: bold;
+    font-size: 20px;
+}
+.info {
+    margin-top: 10px;
+}
+.main-image {
+    width: 1300px;
+    height: 800px;
+    margin-top: 10px;
+}
+.info-image {
+    color: gray;
+    font-size: 14px;
+    margin: auto;
+}
+.copyright{
+   font-weight: bolder;
+    margin: 10px auto;
+}
+.impressive-photographer {
+    padding-top: 5px;
+}
+.equipment-info {
+    padding-top: px;
+}
