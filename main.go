@@ -16,7 +16,7 @@ func main() {
 	middleware.New(app)
 
 	log.Println("Starting Server...")
-	if err := app.Listen(":8080"); err != nil {
+	if err := app.Listen(":80"); err != nil {
 		log.Fatal("Failed Running Server...!")
 	}
 }

@@ -18,6 +18,6 @@ COPY . .
 
 RUN go build -o hyunsang-photogray
 
-EXPOSE 8080
+EXPOSE 80
 
 ENTRYPOINT ["./hyunsang-photogray"]

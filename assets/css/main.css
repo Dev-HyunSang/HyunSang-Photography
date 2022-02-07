@@ -12,19 +12,12 @@ body {
 h1 {
     font-weight: bolder;
 }
-a {
-    text-decoration: none;
-    color: #000;
-}
-a:hover {
-    background-color: #000;
-    color: #fff;
-}
 .main-container {
     margin-top: 30px;
     margin-left: 10px;
     margin-left: 160px;
     padding: 0px 10px;
+    padding-left: 4%;
 }
 #hello-message {
     font-weight: bold;
@@ -52,4 +45,8 @@ a:hover {
 }
 .equipment-info {
     padding-top: px;
+}
+.link:hover {
+    background-color: black;
+    color: white;
 }
